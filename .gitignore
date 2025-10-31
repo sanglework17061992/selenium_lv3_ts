@@ -8,6 +8,14 @@ yarn-error.log*
 dist/
 build/
 
+# Generated TypeScript files in tests
+tests/*.js
+tests/*.d.ts
+tests/*.map
+src/**/*.js
+src/**/*.d.ts
+src/**/*.map
+
 # Test results and reports
 reports/
 coverage/

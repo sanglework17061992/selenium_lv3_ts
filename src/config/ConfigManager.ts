@@ -1,5 +1,5 @@
 import * as dotenv from 'dotenv';
-import { FrameworkConfig, BrowserType, PlatformType, EnvironmentType } from '@types/index';
+import { FrameworkConfig, BrowserType, PlatformType, EnvironmentType } from '../types/index';
 
 // Load environment variables
 dotenv.config();

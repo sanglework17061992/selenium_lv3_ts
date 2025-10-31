@@ -1,0 +1,36 @@
+{
+  "name": "selenium-dashboard-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Selenium Test Dashboard",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "socket.io": "^4.7.4",
+    "fs-extra": "^11.1.1",
+    "chokidar": "^3.5.3",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "multer": "^1.4.5-lts.1",
+    "dotenv": "^16.3.1",
+    "child_process": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "@types/fs-extra": "^11.0.4",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.8.10",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2",
+    "rimraf": "^5.0.5"
+  }
+}

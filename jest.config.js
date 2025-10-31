@@ -4,7 +4,9 @@ module.exports = {
   roots: ['<rootDir>/src', '<rootDir>/tests'],
   testMatch: ['**/__tests__/**/*.ts', '**/?(*.)+(spec|test).ts'],
   transform: {
-    '^.+\\.ts$': 'ts-jest',
+    '^.+\\.ts$': ['ts-jest', {
+      tsconfig: 'tsconfig.test.json'
+    }],
   },
   collectCoverageFrom: [
     'src/**/*.ts',
@@ -17,25 +19,9 @@ module.exports = {
   testTimeout: 60000,
   maxWorkers: process.env.CI ? 2 : '50%',
   reporters: [
-    'default',
-    [
-      'allure-jest',
-      {
-        resultsDir: 'reports/allure-results',
-        categories: [
-          {
-            name: 'Broken tests',
-            matchedStatuses: ['broken']
-          },
-          {
-            name: 'Failed tests', 
-            matchedStatuses: ['failed']
-          }
-        ]
-      }
-    ]
+    'default'
   ],
-  moduleNameMapping: {
+  moduleNameMapper: {
     '^@core/(.*)$': '<rootDir>/src/core/$1',
     '^@config/(.*)$': '<rootDir>/src/config/$1',
     '^@pages/(.*)$': '<rootDir>/src/pages/$1',
